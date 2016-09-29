@@ -8,7 +8,7 @@
 
 <body>
   <div id="output"></div>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="./js/jquery-3.1.1.js"></script>
   <script>
     if (typeof(window.$) === 'undefined') {
       alert('jQuery not <loaded!></loaded!> \nrun "$ bower install" on the CMD/Terminal');
@@ -34,6 +34,7 @@
       cors: true,
       contentType: 'application/json',
       success: function(data) {
+        console.log(data);
         for (var key in data) {
           print(`${key}: ${data[key]}`);
         }
